@@ -9,7 +9,6 @@ export const fetchTasks = createAsyncThunk(
     try {
       const response = await axios.get('/tasks');
       return response.data;
-      console.log(response);
     } catch (e) {
       return thunkAPI.rejectWithValue(e.message);
     }
